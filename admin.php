@@ -6,6 +6,16 @@ $results = $wpdb->get_results( "SELECT `meta_key` FROM wp_usermeta");
 <h2>User Meta Field Profile Selection</h2>
  <select multiple="multiple" id="my-select" name="my-select[]">
  	<?php
+ 	$array = array();
+ foreach ($results as $key => $meta_value) {
+ 	array_push($array , $meta_value->meta_key);
+}
+$array = array_unique($array);
+
+foreach ($array as $key => $value) {
+	echo "<option value='elem_" . $key . "'>" . $value . "</option>";
+}
+
 foreach ($results as $key => $meta_value) {
 	echo "<option value='elem_" . $key . "'>" . $meta_value->meta_key . "</option>";
 }
