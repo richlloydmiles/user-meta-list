@@ -41,6 +41,7 @@ if (isset($_POST['hidden_array'])) {
 		global $wpdb;
 		$results = $wpdb->get_results( "SELECT `meta_key` , `meta_value` FROM wp_usermeta");
 		echo '<h3>Custom User Meta Fields Example for current user</h3>';
+		if ($results) {
 		echo '<table class="form-table">';
 		foreach ($results as $key => $result) {
 			if (in_array($result->meta_key, get_option( 'user_meta_fields' ))) {
@@ -54,6 +55,9 @@ if (isset($_POST['hidden_array'])) {
 			}	
 		}
 		echo '</table>';
+	} else {
+		echo '<p>No user meta has been selected.</p>';		
+	}
 
 
 ?>
