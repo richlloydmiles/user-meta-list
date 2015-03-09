@@ -1,4 +1,4 @@
-=== Custom User Meta Profile List ===
+=== User Meta Profile List ===
 Contributors: richymilo
 Donate link: http://richymiles.wordpress.com
 Tags: user meta, user , user list display
