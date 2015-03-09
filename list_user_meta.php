@@ -15,7 +15,7 @@ function user_meta_profile_list($profile) {
 		if (get_option( 'user_meta_field_title' )) {
 				echo '<h3>' . get_option( 'user_meta_field_title' ) .'</h3>';
 		} else {
-					echo '<h3>Custom Meta Profile Fields</h3>';
+					echo '<h3>Other Information</h3>';
 		}
 
 		echo '<table class="form-table">';
