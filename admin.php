@@ -15,10 +15,6 @@ $array = array_unique($array);
 foreach ($array as $key => $value) {
 	echo "<option value='elem_" . $key . "'>" . $value . "</option>";
 }
-
-foreach ($results as $key => $meta_value) {
-	echo "<option value='elem_" . $key . "'>" . $meta_value->meta_key . "</option>";
-}
  	?>
  </select>
 <script>
@@ -41,6 +37,7 @@ jQuery(document).ready(function($) {
 	</form>
 
 <?php
+
 if (isset($_POST['hidden_array'])) {
 	$array = explode(',', $_POST['hidden_array']);
 	update_option( 'user_meta_fields', $array , '', 'yes' );
