@@ -7,7 +7,9 @@ Version: 0
 Author URI: http://richymiles.wordpress.com
 */
 
-add_action('show_user_profile' , function($profile) {
+
+
+function user_meta_profile_list($profile) {
 		global $wpdb;
 		$results = $wpdb->get_results( "SELECT `meta_key` , `meta_value` FROM wp_usermeta WHERE `user_id` =  $profile->ID");
 		echo '<h3>Custom Meta Profile Fields</h3>';
@@ -24,7 +26,9 @@ add_action('show_user_profile' , function($profile) {
 			}	
 		}
 		echo '</table>';
-});
+}
+add_action('show_user_profile' , 'user_meta_profile_list' );
+add_action('edit_user_profile' , 'user_meta_profile_list' );
 
 add_action('admin_menu', 'add_list_options');
 
