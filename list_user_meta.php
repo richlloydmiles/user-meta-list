@@ -1,6 +1,6 @@
 <?php
 /*
-Plugin Name: Custom User Meta Profile List
+Plugin Name: User Meta Profile List
 Description:  Configures which user meta should display in a custom list.
 Author: Richard Miles
 Version: 0 
