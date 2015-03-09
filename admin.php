@@ -32,8 +32,15 @@ jQuery(document).ready(function($) {
 
 </script>
 	<form action="" method="POST">
+	<p>
+		<input type="text" name="title" placeholder="User Profile Title">	
+	</p>
+
 		<input type="hidden" value="" id="hidden_array" name="hidden_array">
-		<input type="submit" value="update" class="button button-primary" id="update">
+		<p>
+			<input type="submit" value="update" class="button button-primary" id="update">
+		</p>
+		
 	</form>
 
 <?php
@@ -42,6 +49,10 @@ if (isset($_POST['hidden_array'])) {
 	$array = explode(',', $_POST['hidden_array']);
 	update_option( 'user_meta_fields', $array , '', 'yes' );
 }
+if (isset($_POST['title'])) {
+	update_option( 'user_meta_field_title', $_POST['title'] , '', 'yes' );
+}
+
 ?>
 </div>
 <?php

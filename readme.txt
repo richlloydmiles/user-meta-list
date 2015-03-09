@@ -16,6 +16,7 @@ Adds a custom configurable meta list to a users profile display in the admin pan
 
 The User list is configured via the Select 'User Meta Profile Options' page which is listed as a sub-menu item under "Settings".
 A box will appear where you can select which user meta information to display on the user profile page as well as an example. 
+You can also edit the heading title text of the configured list. 
 
 == Installation ==
 
